@@ -1,0 +1,61 @@
+Circulyst Kabaad Gang: Character Brief v2 (26 Oct 2026)
+
+FAISLA
+- Style: aapki nayi sheet wala 3D animated-film look (soft, warm light, thoda clay jaisa texture). Saare characters EK hi style mein.
+- Pheru insaan hai (pickup partner, adult). Baaki Gang insaan nahi, kabaad se bane characters hain. Isse bachche wala risk khatam aur har character ka material ek nazar mein samajh aata hai.
+- Raddi Raja ke liye aapki sheet se ye liya: hara gamcha, hare-safed sneakers, akhbaar ke baal, expression set, turnaround layout. Bachcha nahi, akhbaaron ka bana raja.
+- Tel Tai: ON HOLD, mat banao.
+
+SAB CHARACTERS KE NIYAM (har prompt ke end mein ye line jodo)
+"3D stylized animated film character, soft clay-like texture, warm natural light, full body, plain cream background (#F3EEE2), no text, no letters, no logo, no recycling symbols, no watermark, consistent character design."
+- Rang: Circulyst green #13711F, leaf green #3FAE49, cream #F3EEE2, kraft brown #C98B4F. Website wala hara, sheet wala #1A4331 nahi.
+- Image mein koi text, logo ya recycle symbol nahi. Asli logo aur Hindi/English text main baad mein khud lagaunga.
+- Ek baar master image pakki ho jaye, uske baad har image usi ko reference bana ke banao (same seed / "character reference").
+
+HAR CHARACTER KE LIYE MUJHE YE FILES CHAHIYE
+1. Master: front, full body, 2048px.
+2. Turnaround: front, side, back, 3/4.
+3. 8 expressions (sirf chehra + kandhe): happy, wink, surprised, thinking, excited, sad, laughing, angry.
+4. 6 poses (full body): thumbs up, pointing, waving, holding his item, walking, celebrating jump.
+- Har file ALAG PNG, TRANSPARENT background, kam se kam 1080px. Sheet wali ek badi image nahi chalegi, alag-alag files chahiye.
+- File naam: raja_happy.png, raja_pose_pointing.png, botal_master.png ... aise.
+- Upload: Drive folder 1N-mHKOIJ72k0pw_CgEJtmTWrqPnRWawU mein "characters" naam ka folder.
+
+1) RADDI RAJA - Paper, Gang ka leader
+Kaun: akhbaaron ke bundle se bana raja. Bachcha nahi, insaan nahi.
+Look: body mudhe hue akhbaaron ka mota bundle, jute ki rassi ki belt. Baal akhbaar ki patti se. Sar pe mudhe akhbaar ka taaj, sunehri kinaari. Kanpuriya moonchh. Gale mein hara gamcha (sash ki tarah). Hare-safed sneakers. Chhati pe akhbaar ki headline ke liye khaali jagah (main "KANPUR KI KHABAR" lagaunga, har shehar mein naam badlega).
+Mood: thoda bhaukaal, dil ka accha, bade bhaiya wala.
+Prompt: "A proud king character made of folded old newspapers, body is a thick bundle of newspapers tied with a jute rope belt, hair made of torn newspaper strips, a folded newspaper crown with thin gold trim, a big curled Indian moustache, a green cotton gamcha scarf worn like a royal sash, green and white sneakers, a blank newspaper headline area on his chest, friendly confident smile, hands on hips"
+
+2) BOTAL BHAIYA - Plastic
+Kaun: PET bottle, cool aur tez bolne wala.
+Look: saaf transparent bottle, halka neela tint, andar thoda paani. Bottle ka dhakkan ulti topi ki tarah. Sar pe sunglasses. Beech mein hari label band (khaali, koi text nahi). Sneakers.
+Prompt: "A cool talkative character made from a clear PET plastic water bottle with a light blue tint, the bottle cap worn like a backwards baseball cap, sunglasses pushed up on his head, a plain green label band around his middle, thin arms and legs, sneakers, cheeky grin"
+
+3) TINKU TIN - Metal
+Kaun: steel ka dabba, gym wala, dent se nahi darta.
+Look: chamakta steel tin can, ek taraf chhota sa dent, laal patti, sweatband, chhote bicep. Dhakkan thoda khula jaise topi.
+Prompt: "A tough but funny gym-loving character made from a shiny steel tin can with a small dent on one side, a red stripe band, a sweatband on his head, small flexing biceps, the tin lid slightly open like a cap, sneakers, confident wink"
+
+4) MOBILE MAMA - E-waste
+Kaun: purana keypad phone, bhulakkad par samajhdaar mama. Safety wali baatein yahi bolta hai.
+Look: purana Nokia jaisa keypad phone, screen pe halki crack, screen hi chehra, gol chashma, charger ka taar poonchh ki tarah, sweater vest.
+Prompt: "A wise forgetful uncle character made from an old keypad mobile phone, the small screen is his face with a light crack, round spectacles, the keypad as his belly, a charger cable curling behind him like a tail, a knitted sweater vest, kind smile, raising one finger like giving advice"
+
+5) DUMPASUR - Villain, mila-jula kachra
+Kaun: jab sab kabaad ek bore mein bhar diya jaata hai. Funny-dushman, darawna ya gandagi wala nahi. Aag ya jalna kabhi nahi.
+Look: jute ki bori jisme se akhbaar, bottle, tin, taar bahar nikal rahe hain, ek badi aankh, nukile daant, bhoora-hara rang. 3 size chahiye: bada, medium, chhota.
+Prompt: "A funny villain monster made from an overstuffed jute sack with old newspapers, plastic bottles, tin cans and tangled wires sticking out, one big eye, small pointy teeth, olive brown and green colours, mischievous but not scary, cartoon style, no fire, no dirt or slime"
+
+6) PHERU - Hero, insaan (pickup partner)
+Kaun: Circulyst ka pickup wala bhaiya, umar 28-35. Launch ke baad har kahani mein solution yahi laata hai. Abhi pre-launch hai, isliye kam use hoga.
+Look: hari polo t-shirt (bina logo, logo main lagaunga), cream cargo pants, hari cap, haath mein digital kaanta aur receipt. Aapki purani Pheru image jaisa hi rakho, bas transparent background aur isi naye style mein.
+Prompt: "A friendly Indian man aged about 30, a doorstep scrap pickup partner, plain green polo t-shirt without any logo, cream cargo pants, green cap, holding a small digital weighing scale and a paper receipt, warm trustworthy smile"
+
+KYA NAHI KARNA
+- Koi bachcha nahi, kisi bhi character mein.
+- Image mein nakli logo, "waste to value" jaise tagline, English slogan wale dabbe, recycle symbol nahi.
+- Kachra jalana ya aag nahi.
+- Tel Tai aur purana tel nahi (UCO ON HOLD).
+
+Reference images (sirf style ke liye, post nahi karni, nakli logo hai): Studio assets e037c966d08619235712acce8910a1f4 aur 84fd1db4a589c227ef4bde8a2765f6e3.

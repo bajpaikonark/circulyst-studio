@@ -1,0 +1,6 @@
+{"bpm":130,"duration":18.0,"key":"D",
+ "sections":[{"start_beat":0,"beats":6,"style":"intro"},{"start_beat":6,"beats":20,"style":"groove"},{"start_beat":26,"beats":6,"style":"lift"},{"start_beat":32,"beats":7,"style":"outro"}],
+ "sfx":[{"beat":0,"type":"pop","offset":0.05},{"beat":6,"type":"whoosh","offset":-0.25},{"beat":10,"type":"whoosh","offset":-0.25},{"beat":14,"type":"whoosh","offset":-0.25},{"beat":18,"type":"whoosh","offset":-0.25},{"beat":22,"type":"whoosh","offset":-0.25},
+        {"beat":7,"type":"tick"},{"beat":11,"type":"tick"},{"beat":15,"type":"tick"},{"beat":19,"type":"tick"},{"beat":23,"type":"tick"},
+        {"beat":26,"type":"whoosh","offset":-0.25},{"beat":26,"type":"pop","offset":0.35},{"beat":26,"type":"pop","offset":0.7},{"beat":26,"type":"pop","offset":1.05},
+        {"beat":32,"type":"chime"},{"beat":33,"type":"ding","offset":0.15}]}
