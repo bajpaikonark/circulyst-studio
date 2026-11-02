@@ -1,0 +1,88 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Kalam:wght@700&display=swap">
+<style>
+/* Reel v3 template: one JSON script per reel (?r=R2). Newsprint collage, 3D Kabaad Gang that walks in, KANPUR ask visible from the first second. */
+*{box-sizing:border-box;margin:0}html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:Poppins,sans-serif;color:#232946;background:#f3eee2;position:relative}
+.grain{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.32;mix-blend-mode:multiply;pointer-events:none;z-index:50}
+.layer{position:absolute;inset:0;opacity:0}
+.pad{position:absolute;left:80px;right:80px}
+h1{font-size:96px;line-height:1.18;font-weight:800;letter-spacing:-.025em;text-wrap:balance}
+.hl{background:#2f9a3c;color:#fff;padding:0 16px;border-radius:10px 18px 12px 20px/20px 10px 18px 12px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.red{background:#d3212c}
+.tag{display:inline-block;font-size:36px;font-weight:700;padding:8px 24px;border-radius:6px;color:#fff;background:#232946;transform:rotate(-1.5deg);margin-bottom:26px}
+.sub{font-size:44px;font-weight:600;line-height:1.3;margin-top:22px;color:#3a3f55}
+.c3{position:absolute;bottom:0;display:block;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(10px 18px 12px rgba(35,41,70,.25));transform-origin:50% 100%}
+.ground{position:absolute;left:0;right:0;height:22px;background:repeating-linear-gradient(90deg,rgba(35,41,70,.08) 0 40px,transparent 40px 70px);border-radius:12px}
+.bubble{position:absolute;background:#fff;border-radius:12px;padding:20px 26px;font-family:Kalam,cursive;font-weight:700;font-size:46px;line-height:1.15;box-shadow:0 20px 34px -24px rgba(35,41,70,.6);max-width:520px;z-index:5}
+.hand{position:absolute;font-family:Kalam,cursive;font-weight:700;color:#d3212c;font-size:56px;line-height:1.1;transform:rotate(-4deg);z-index:5}
+.chips{position:absolute;left:80px;right:80px;display:flex;flex-wrap:wrap;gap:12px;z-index:5}
+.chips span{background:#fff;border-radius:6px;padding:10px 20px;font-size:38px;font-weight:700;border:2px solid rgba(35,41,70,.12)}
+.ask{position:absolute;top:70px;right:60px;z-index:40;background:#10261a;color:#fff;font-weight:700;font-size:36px;padding:14px 22px;border-radius:10px;transform:rotate(2deg);box-shadow:0 14px 24px -16px rgba(0,0,0,.5)}
+.ask b{background:#3fae49;padding:2px 14px;border-radius:6px}
+.cta{display:inline-flex;align-items:center;gap:14px;font-size:46px;font-weight:700;background:#10261a;color:#fff;border-radius:10px;padding:22px 34px;transform:rotate(-.8deg)}
+.cta b{background:#3fae49;padding:4px 20px;border-radius:8px}
+.big{font-size:260px;font-weight:800;line-height:1;letter-spacing:-.04em;color:#2f9a3c}
+</style></head><body>
+<div id="root"></div><div class="ask" id="ask">Comment <b>KANPUR</b></div><div class="grain"></div>
+<script>
+const R={
+R2:{dur:17.6,scenes:[
+ {t:0,d:4.4,tag:"Naya avatar",title:'Kanpur, humein <span class="hl">pehchaana?</span>',chars:[{n:"raja",h:860,x:580,walk:"R"}],bubble:{text:"Guru, hum laut aaye! Naye roop mein.",l:90,top:820,at:1.8}},
+ {t:4.4,d:4.6,title:'Botal. Tinku. <span class="hl">Mobile Mama.</span>',chars:[{n:"botal",h:640,x:40,walk:"L",at:.2},{n:"tinku",h:420,x:330,walk:"L",at:.8},{n:"mobile",h:600,x:700,walk:"R",at:1.4}],chips:{items:["Plastic","Metal","E-waste"],top:520,at:2.4}},
+ {t:9.0,d:4.2,title:'Aur ye hai <span class="hl red">Dumpasur.</span>',chars:[{n:"dumpasur",h:880,x:200,grow:true}],hand:{text:"sab kuch ek bore mein<br>= Dumpasur",l:90,top:560,at:1.6}},
+ {t:13.2,d:4.4,end:true,title:'Kanpur ki gali-gali,<br><span class="hl">Gang aa rahi hai.</span>'}]},
+R3:{dur:18.0,scenes:[
+ {t:0,d:4.6,tag:"Diwali ke baad",title:'Ghar mein <span class="hl red">gatte ka pahaad?</span>',chars:[{n:"dumpasur",h:760,x:300,grow:true}],bubble:{text:"Muhahaha, gift ke saare dibbe mere!",l:80,top:600,at:1.8}},
+ {t:4.6,d:4.6,title:'Dibbe = <span class="hl">paisa.</span><br>Flat karo, bundle banao.',chars:[{n:"raja",h:880,x:300,walk:"R"}],bubble:{text:"Sukha rakho, geela gatta kam bikta hai.",l:80,top:980,at:2.0}},
+ {t:9.2,d:4.4,title:'Tape, thermocol, plastic <span class="hl">alag.</span>',chars:[{n:"botal",h:700,x:120,walk:"L"},{n:"tinku",h:500,x:560,walk:"R",at:.6}],chips:{items:["Gatta","Thermocol","Plastic"],top:520,at:2.2}},
+ {t:13.6,d:4.4,end:true,title:'Diwali ka kabaad,<br><span class="hl">sahi jagah.</span>'}]},
+R4:{dur:18.4,scenes:[
+ {t:0,d:4.6,tag:"Kanpur, sun lo",title:'Pehle <span class="hl">100 ghar</span> kaun honge?',count:true,chars:[{n:"mobile",h:600,x:640,walk:"R",at:.4}]},
+ {t:4.6,d:4.8,title:'Rate pehle. Digital kaanta. <span class="hl">Receipt.</span>',chars:[{n:"raja",h:820,x:160,walk:"L"}],chips:{items:["Rate pehle","Digital kaanta","Har pickup ki receipt"],top:520,at:2.0}},
+ {t:9.4,d:4.6,title:'Bas comment karo: <span class="hl">KANPUR</span>',chars:[{n:"botal",h:560,x:40,walk:"L"},{n:"raja",h:700,x:330,walk:"L",at:.4},{n:"tinku",h:420,x:640,walk:"R",at:.8}],hand:{text:"launch ki khabar<br>sabse pehle aapko",l:90,top:560,at:2.0}},
+ {t:14.0,d:4.4,end:true,title:'Jald Kanpur mein.<br><span class="hl">Aap list mein ho?</span>'}]}
+};
+const key=new URLSearchParams(location.search).get("r")||"R2",S=R[key];window.DURATION=S.dur;
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),ease=x=>1-Math.pow(1-clamp(x),3);
+const back=x=>{x=clamp(x);const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+let h="";
+S.scenes.forEach((s,i)=>{
+  h+=`<div class="layer" id="L${i}"><div class="pad" style="top:${s.end?300:240}px">${s.tag?`<div class="tag">${s.tag}</div>`:""}<h1>${s.title}</h1>`;
+  if(s.count)h+=`<div class="big" id="cnt">0</div>`;
+  if(s.end)h+=`<img src="circulyst-logo.png" style="height:120px;margin-top:60px;display:block"><div style="font-size:44px;font-weight:700;color:#2f9a3c;margin-top:16px">Value Begins Here.</div><div class="cta" style="margin-top:50px">Comment <b>KANPUR</b> · early access</div>`;
+  h+=`</div><div class="ground" style="top:1700px"></div>`;
+  const chars=s.end?[{n:"botal",h:440,x:30,walk:"L"},{n:"raja",h:560,x:250,walk:"L",at:.3},{n:"tinku",h:340,x:560,walk:"R",at:.6},{n:"mobile",h:450,x:800,walk:"R",at:.9}]:(s.chars||[]);
+  chars.forEach((c,j)=>{h+=`<img class="c3" data-s="${i}" data-j="${j}" src="chars3d/${c.n}.png" style="height:${Math.round(c.h*(s.end?1:1.18))}px;left:${c.x}px;bottom:${1920-1712}px">`});
+  s._chars=chars;
+  if(s.bubble)h+=`<div class="bubble" id="b${i}" style="left:${s.bubble.l}px;top:${s.bubble.top}px">${s.bubble.text}</div>`;
+  if(s.hand)h+=`<div class="hand" id="h${i}" style="left:${s.hand.l}px;top:${s.hand.top}px">${s.hand.text}</div>`;
+  if(s.chips)h+=`<div class="chips" id="c${i}" style="top:${s.chips.top}px">${s.chips.items.map(x=>`<span>${x}</span>`).join("")}</div>`;
+  h+=`</div>`;
+});
+document.getElementById("root").innerHTML=h;
+const imgs=[...document.querySelectorAll(".c3")];
+// Keep every character fully on screen once its image size is known.
+const fit=el=>{const w=el.getBoundingClientRect().width/((el._sx)||1);const l=parseFloat(el.style.left);if(l+w>1050)el.style.left=Math.max(20,1050-w)+"px"};
+imgs.forEach(el=>{if(el.complete)fit(el);else el.addEventListener("load",()=>fit(el))});
+window.render=function(t){
+  S.scenes.forEach((s,i)=>{const L=document.getElementById("L"+i),a=s.t,b=s.t+s.d,last=i===S.scenes.length-1;
+    const inn=i===0?1:ease((t-a)/.3),out=last?0:ease((t-(b-.25))/.25),on=t>=a&&(t<b||last);
+    L.style.opacity=on?(inn*(1-out)).toFixed(3):0;L.style.transform=`translateY(${((1-inn)*50-out*30).toFixed(1)}px)`;
+    const lt=t-a;
+    ["b","h","c"].forEach(k=>{const el=document.getElementById(k+i);const cfg=k==="b"?s.bubble:k==="h"?s.hand:s.chips;if(!el)return;const p=back((lt-cfg.at)/.4);el.style.opacity=clamp((lt-cfg.at)/.15);el.style.transform=`rotate(${k==="b"?-2:k==="h"?-4:0}deg) scale(${(.85+.15*p).toFixed(3)})`});
+    const cnt=document.getElementById("cnt");if(cnt&&i===0)cnt.textContent=Math.round(100*ease((lt-1)/2.2));
+  });
+  imgs.forEach(el=>{const s=S.scenes[+el.dataset.s],c=s._chars[+el.dataset.j],lt=t-s.t-(c.at||0);
+    if(c.grow){const g=ease(lt/2.5);el.style.opacity=clamp(lt/.2);el.style.transform=`scale(${(.55+.45*g+Math.sin(t*5)*.015).toFixed(3)}) rotate(${(Math.sin(t*3)*2).toFixed(2)}deg)`;return}
+    const W=1.5,p=ease(lt/W),dir=c.walk==="L"?-1:1,dx=(1-p)*dir*700;
+    const walking=lt<W,ph=lt*Math.PI*2*2.2;
+    const bob=walking?Math.abs(Math.sin(ph))*-18:Math.sin(t*2.4+ +el.dataset.j)*-5;
+    const rot=walking?Math.sin(ph)*3.5:Math.sin(t*1.8+ +el.dataset.j)*1.2;
+    const sq=walking?1-Math.max(0,Math.cos(ph*2))*.035:1;
+    el.style.opacity=lt>0?1:0;
+    el.style.transform=`translate(${dx.toFixed(1)}px,${bob.toFixed(1)}px) rotate(${rot.toFixed(2)}deg) scale(${(2-sq).toFixed(3)},${sq.toFixed(3)})`});
+  const ask=document.getElementById("ask");const ap=back((t-.3)/.4);ask.style.opacity=t>S.scenes[S.scenes.length-1].t?0:clamp((t-.3)/.15);ask.style.transform=`rotate(2deg) scale(${(.8+.2*ap).toFixed(3)})`;
+};
+render(0);
+</script></body></html>
