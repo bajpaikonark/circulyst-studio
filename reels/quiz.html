@@ -1,0 +1,53 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Kalam:wght@700&display=swap">
+<style>
+/* R6: "Bikega ya nahi?" game. Each item: taped card, 3-second countdown, rubber-stamp answer, one-line reason. */
+*{box-sizing:border-box;margin:0}html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:Poppins,sans-serif;background:#f3eee2;color:#232946;position:relative}
+.grain{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.3;mix-blend-mode:multiply;pointer-events:none;z-index:50}
+.title{position:absolute;left:80px;right:80px;top:150px;font-size:96px;font-weight:800;line-height:1.18;letter-spacing:-.025em}
+.hl{background:#2f9a3c;color:#fff;padding:0 16px;border-radius:10px 18px 12px 20px/20px 10px 18px 12px}
+.score{position:absolute;right:70px;top:70px;font-family:Kalam,cursive;font-size:48px;color:#d3212c;transform:rotate(3deg)}
+.card{position:absolute;left:110px;right:110px;top:560px;height:520px;background:#fffdf6;border-radius:8px;box-shadow:0 30px 50px -30px rgba(35,41,70,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:40px;opacity:0}
+.card::before{content:"";position:absolute;top:-20px;left:50%;width:200px;height:46px;transform:translateX(-50%) rotate(-3deg);background:rgba(233,220,180,.9)}
+.card .num{font-family:Kalam,cursive;font-size:44px;color:#7a4a22}
+.card .it{font-size:84px;font-weight:800;line-height:1.15}
+.timer{font-size:150px;font-weight:800;color:#2f9a3c;line-height:1}
+.stamp{position:absolute;top:87%;left:50%;font-size:78px;font-weight:800;letter-spacing:.06em;padding:10px 36px;border:10px solid;border-radius:14px;transform:translate(-50%,-50%) rotate(-12deg);opacity:0;background:rgba(255,253,246,.85)}
+.yes{color:#13711f;border-color:#13711f}.no{color:#c4372d;border-color:#c4372d}.maybe{color:#c27a0e;border-color:#c27a0e}
+.why{position:absolute;left:110px;right:110px;top:1130px;font-size:46px;font-weight:600;line-height:1.35;text-align:center;opacity:0}
+.c3{position:absolute;bottom:110px;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(10px 18px 12px rgba(35,41,70,.25));transform-origin:50% 100%;opacity:0}
+.ask{position:absolute;top:70px;left:70px;z-index:40;background:#10261a;color:#fff;font-weight:700;font-size:36px;padding:14px 22px;border-radius:10px;transform:rotate(-2deg)}
+.ask b{background:#3fae49;padding:2px 14px;border-radius:6px}
+.end{position:absolute;inset:0;background:#f3eee2;opacity:0;z-index:45;display:flex;flex-direction:column;justify-content:center;padding:0 90px;gap:30px}
+.end h1{font-size:92px;line-height:1.18;font-weight:800;letter-spacing:-.025em}
+.cta{display:inline-flex;align-self:flex-start;gap:14px;align-items:center;font-size:46px;font-weight:700;background:#10261a;color:#fff;border-radius:10px;padding:22px 34px;transform:rotate(-.8deg)}
+.cta b{background:#3fae49;padding:4px 20px;border-radius:8px}
+</style></head><body>
+<div class="ask">Comment <b>KANPUR</b></div>
+<div class="title" id="title">Bikega ya <span class="hl">nahi?</span></div>
+<div class="score" id="score">khud check karo</div>
+<div id="items"></div>
+<div class="end" id="end"><h1>Kitne <span class="hl">sahi</span> hue?</h1><div style="font-size:48px;font-weight:600;line-height:1.35">Sahi tarah alag rakha kabaad hi sahi daam laata hai.</div><img src="circulyst-logo.png" style="height:120px;align-self:flex-start"><div class="cta">Comment <b>KANPUR</b> · early access</div></div>
+<div class="grain"></div>
+<script>
+const I=[
+ {it:"Doodh ka<br>Tetra Pak dabba",a:"BIKEGA",k:"yes",why:"Recycle hota hai. Dho ke, chapta karke alag rakho.",ch:"botal"},
+ {it:"Thermocol",a:"MUSHKIL",k:"maybe",why:"Zyadatar kabadiwale nahi lete. Kachre mein bhi mat jalao.",ch:"dumpasur"},
+ {it:"Purana<br>mobile charger",a:"BIKEGA",k:"yes",why:"E-waste hai, keemti hai. Kabhi kachre mein nahi.",ch:"mobile"},
+ {it:"Barish mein<br>bheegi raddi",a:"KAM DAAM",k:"no",why:"Geela kaagaz kam tulta hai, kam bikta hai. Raddi sukhi rakho.",ch:"raja"}];
+const T0=2.6,STEP=4.6,END=T0+I.length*STEP,DUR=END+3.8;window.DURATION=DUR;
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),back=x=>{x=clamp(x);const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+document.getElementById("items").innerHTML=I.map((x,i)=>`<div class="card" id="c${i}"><div class="num">${i+1} / ${I.length}</div><div class="it">${x.it}</div><div class="timer" id="tm${i}">3</div><div class="stamp ${x.k}" id="s${i}">${x.a}</div></div><div class="why" id="w${i}">${x.why}</div><img class="c3" id="ch${i}" src="chars3d/${x.ch}.png" style="height:${x.ch==="dumpasur"?440:x.ch==="raja"?470:400}px;${i%2?"left:60px":"right:60px"}">`).join("");
+window.render=function(t){
+ document.getElementById("title").style.transform=`scale(${(.9+.1*back(t/.5)).toFixed(3)})`;
+ I.forEach((x,i)=>{const a=T0+i*STEP,lt=t-a,on=t>=a&&t<a+STEP;
+  const c=document.getElementById("c"+i),p=back(lt/.4);c.style.opacity=on?1:0;c.style.transform=`rotate(${i%2?1.2:-1.2}deg) scale(${(.85+.15*p).toFixed(3)})`;
+  const tm=document.getElementById("tm"+i);const left=Math.ceil(2.4-lt*1.0);tm.textContent=left>0?left:"";tm.style.opacity=lt<2.4?1:0;
+  const s=document.getElementById("s"+i),sp=clamp((lt-2.4)/.18);s.style.opacity=sp;s.style.transform=`translate(-50%,-50%) rotate(-12deg) scale(${(1.6-.6*sp).toFixed(3)})`;
+  const w=document.getElementById("w"+i);w.style.opacity=on?clamp((lt-2.7)/.25):0;
+  const ch=document.getElementById("ch"+i),cl=lt-.3,walk=cl<1.3,ph=cl*Math.PI*4.4,dir=i%2?-1:1;
+  ch.style.opacity=on&&cl>0?1:0;ch.style.transform=`translate(${((1-clamp(cl/1.3))*dir*500).toFixed(0)}px,${(walk?Math.abs(Math.sin(ph))*-16:Math.sin(t*2.4)*-5).toFixed(1)}px) rotate(${(walk?Math.sin(ph)*3.5:Math.sin(t*1.8)*1.2).toFixed(2)}deg)`});
+ document.getElementById("end").style.opacity=clamp((t-END)/.4);
+};render(0);
+</script></body></html>
