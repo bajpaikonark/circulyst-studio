@@ -608,9 +608,9 @@ document.addEventListener("click",async ev=>{
   if(act==="approve"&&p){
     if(S.armed!==id){S.armed=id;renderReview();clearTimeout(S._arm);S._arm=setTimeout(()=>{S.armed=null;renderReview()},5000);return}
     S.armed=null;if(await write("posts/"+id,{status:"approved",decidedAt:now(),approvedVersion:p.version||1,feedback:"",decidedBy:S.me||null},true))toast(p.code+" approved");
-  }else if(act==="changes"&&p){S.openEditor=id;renderReview();setTimeout(()=>document.getElementById("fb-"+id)?.focus(),30)}
+  }else if(act==="changes"&&p){S.openEditor=id;renderReview();setTimeout(()=>document.querySelector(`main:not([hidden]) #fb-${CSS.escape(id)}`)?.focus(),30)}
   else if(act==="cancelfb"){S.openEditor=null;renderReview()}
-  else if(act==="sendfb"&&p){const v=(document.getElementById("fb-"+id)?.value||"").trim();if(!v){toast("Pehle likho kya badalna hai.");return}
+  else if(act==="sendfb"&&p){const v=((b.closest(".editor")||document).querySelector("textarea")?.value||"").trim();if(!v){toast("Pehle likho kya badalna hai.");return}
     S.openEditor=null;if(await write("posts/"+id,{status:"changes",feedback:v,decidedAt:now()},true))toast("Changes bhej diye. Claude naya version banayega.")}
   else if(act==="reject"&&p){if(await write("posts/"+id,{status:"rejected",decidedAt:now()},true))toast(p.code+" rejected")}
   else if(act==="undo"&&p){if(await write("posts/"+id,{status:"pending",decidedAt:now()},true))toast(p.code+" wapas review mein")}
