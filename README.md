@@ -12,3 +12,5 @@ Instagram content system for Circulyst (Kanpur, pre-launch).
 - `exports/`: final rendered posts.
 
 Rules: UCO (used cooking oil) on hold; founder never shown; no fixed ₹/kg rates ("Example rate" only); "70% turant, baaki verification ke baad", never "instant payout"; never imply pickups are live or give a launch date.
+
+Mascot: **Pheru** (human pickup partner, `chars3d/pheru.png`) is Circulyst's mascot and brand face: every reel end card and every trust scene (rate, kaanta, receipt, pickup). The Kabaad Gang are supporting characters.
